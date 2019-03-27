@@ -1,3 +1,11 @@
+The main steps for building a Neural Network are:
+1. Define the model structure (such as number of input features)
+2. Initialize the model's parameters
+3. Loop:
+    - Calculate current loss (forward propagation)
+    - Calculate current gradient (backward propagation)
+    - Update parameters (gradient descent)
+
 Input:
 
 $$
@@ -12,7 +20,7 @@ y^i &∈ \{0, 1\} \\
 $$
 <br/>
 
-Parameters:
+Parameters (weights and bias):
 
 $$
 \{w, b\} \\
@@ -26,7 +34,7 @@ b &∈ R \\
 $$
 <br/>
 
-Output:
+Output / activation function:
 
 $$
 \begin{aligned}
@@ -45,14 +53,20 @@ $$
 Loss function (cross entropy):
 
 $$
-L(a^i, y^i) = -(y^iln(a^i) + (1-y^i)ln(1-a^i))
+\begin{aligned}
+
+p(y|x) &= (a^i)^{y^i} (1-a^i)^{1-y^i} \\
+L(a^i, y^i) &= -ln(p(y|x)) \\
+&= -(y^iln(a^i) + (1-y^i)ln(1-a^i)) \\
+
+\end{aligned} \\
 $$
 <br/>
 
 Cost function:
 
 $$
-J(w, b) = \frac{1}{m} \sum\limits_{i=1}^m L(a^i, y^i)
+J = \frac{1}{m} \sum\limits_{i=1}^m L(a^i, y^i)
 $$
 <br/>
 
@@ -63,8 +77,8 @@ Repeat <br/>
 $$
 \begin{aligned}
 
-w &:= w - 	α \frac{∂J(w, b)}{∂w} \\
-b &:= b - 	α \frac{∂J(w, b)}{∂b} \\
+w &:= w - 	α \frac{∂J}{∂w} \\
+b &:= b - 	α \frac{∂J}{∂b} \\
 
 \end{aligned} \\
 $$
@@ -91,8 +105,11 @@ $$
 \frac{∂L(a, y)}{∂b} &= \frac{∂L(a, y)}{∂z}\frac{∂z}{∂b} \\
 &= a-y \\
 
-\frac{∂J(a, y)}{∂w_j} &= \frac{1}{m} \sum\limits_{i=1}^m \frac{∂L(a^i, y^i)}{∂w_j} \\
-&= \frac{1}{m} \sum\limits_{i=1}^m (a^i-y^i)x^i_j
+\frac{∂J}{∂w_j} &= \frac{1}{m} \sum\limits_{i=1}^m \frac{∂L(a^i, y^i)}{∂w_j} \\
+&= \frac{1}{m} \sum\limits_{i=1}^m (a^i-y^i)x^i_j \\
+
+\frac{∂J}{∂b} &= \frac{1}{m} \sum\limits_{i=1}^m \frac{∂L(a^i, y^i)}{∂b} \\
+&= \frac{1}{m} \sum\limits_{i=1}^m (a^i-y^i) \\
 
 \end{aligned} \\
 $$
@@ -104,3 +121,7 @@ $$
 \end{aligned} \\
 $$
 <br/>
+
+Overfitting:
+
+Try to increase the number of iterations. You might see that the training set accuracy goes up, but the test set accuracy goes down. This is called overfitting.
