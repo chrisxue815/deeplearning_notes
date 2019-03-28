@@ -114,7 +114,7 @@ def propagate(w, b, X, Y):
 
     # FORWARD PROPAGATION (FROM X TO COST)
     ### START CODE HERE ### (≈ 2 lines of code)
-    A = sigmoid(np.dot(w.T, X) + b)            # compute activation
+    A = sigmoid(w.T @ X + b)            # compute activation
     cost = np.sum(Y * np.log(A) + (1 - Y) * np.log(1 - A)) / -m         # compute cost
     ### END CODE HERE ###
 
@@ -123,7 +123,7 @@ def propagate(w, b, X, Y):
 
     # BACKWARD PROPAGATION (TO FIND GRAD)
     ### START CODE HERE ### (≈ 2 lines of code)
-    dw = np.dot(X, (A - Y).T) / m
+    dw = X @ (A - Y).T / m
     db = np.sum(A - Y) / m
     ### END CODE HERE ###
 
@@ -228,7 +228,7 @@ def predict(w, b, X):
 
     # Compute vector "A" predicting the probabilities of a cat being present in the picture
     ### START CODE HERE ### (≈ 1 line of code)
-    A = sigmoid(np.dot(w.T, X) + b)
+    A = sigmoid(w.T @ X + b)
     ### END CODE HERE ###
 
     for i in range(A.shape[1]):
