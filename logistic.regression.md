@@ -92,17 +92,17 @@ $$
 
 \frac{∂L(a, y)}{∂a} &= -\frac{y}{a} + \frac{1-y} {1-a} \\
 
-\frac{∂a}{∂z} &= \frac{e^{-z}}{(e^{-z}+1)^2} \\
+\frac{da}{dz} &= \frac{e^{-z}}{(e^{-z}+1)^2} \\
 &= \frac{1}{1+e^{-z}}(1-\frac{1}{1+e^{-z}}) \\
 &= a(1-a) \\
 
-\frac{∂L(a, y)}{∂z} &= \frac{∂L(a, y)}{∂a}\frac{∂a}{∂z} \\
+\frac{∂L(a, y)}{∂z} &= \frac{∂L(a, y)}{∂a}\frac{da}{dz} \\
 &= a-y \\
 
-\frac{∂L(a, y)}{∂w_j} &= \frac{∂L(a, y)}{∂z}\frac{∂z}{∂w_j} \\
+\frac{∂L(a, y)}{∂w_j} &= \frac{∂L(a, y)}{∂z}\frac{dz}{dw_j} \\
 &= (a-y)x_j \\
 
-\frac{∂L(a, y)}{∂b} &= \frac{∂L(a, y)}{∂z}\frac{∂z}{∂b} \\
+\frac{∂L(a, y)}{∂b} &= \frac{∂L(a, y)}{∂z}\frac{dz}{db} \\
 &= a-y \\
 
 \frac{∂J}{∂w_j} &= \frac{1}{m} \sum\limits_{i=1}^m \frac{∂L(a^i, y^i)}{∂w_j} \\
