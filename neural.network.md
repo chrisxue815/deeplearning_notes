@@ -3,19 +3,15 @@ Forward propagation:
 $$
 \begin{aligned}
 
-a^{[l-1]} &: [n^{[l-1]}, m] \\
-
-w^{[l]} &: [n^{[l]}, n^{[l-1]}] \\
-
-b^{[l]} &: [n^{[l]}, 1] \\
-
 z^{[l]} &= w^{[l]} a^{[l-1]} + b^{[l]} \\
-&: [n^{[l]}, m] \\
+
+Dimension: \frac{n^{[l]}}{m} &= \frac{n^{[l]}}{n^{[l-1]}} \frac{n^{[l-1]}}{m} + \frac{n^{[l]}}{1} \\
 
 a^{[l]} &= g(z^{[l]}) \\
-&: [n^{[l]}, m] \\
 
 L &= - (yln(a^{[l]}) + (1-y)ln(1-a^{[l]}) \\
+
+J &= \frac{1}{m} \sum\limits_{i=1}^m L^{(i)} \\
 
 \end{aligned}
 $$
@@ -30,6 +26,8 @@ da^{[L]} &= -\frac{y}{a^{[L]}} + \frac{1-y}{1-a^{[L]}} \\
 dz^{[l]} &= da^{[l]} g'(z^{[l]}) \\
 
 dw^{[l]} &= \frac{1}{m} dz^{[l]} a^{[l-1]T} \\
+
+Dimension: \frac{n^{[l]}}{n^{[l-1]}} &= \frac{n^{[l]}}{m} \frac{m}{n^{[l-1]}} \\
 
 db^{[l]} &= \frac{1}{m} sum(dz^{[l]}) \\
 
