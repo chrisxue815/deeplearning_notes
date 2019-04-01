@@ -17,3 +17,23 @@ w^{[l]}
 $$
 
 which is why L2 regularization is also called "weight decay".
+
+## Dropout
+
+Training (inverted dropout):
+
+$$
+\begin{aligned}
+
+d^{[l]} &= np.random.rand(*a^{[l]}.shape) < keep\_prob^{[l]} \\
+
+a^{[l]} *&= d^{[l]} \\
+
+a^{[l]} *&= \frac{1}{keep\_prob^{[l]}} \\
+
+\end{aligned}
+$$
+
+Predicting:
+
+No dropout.
