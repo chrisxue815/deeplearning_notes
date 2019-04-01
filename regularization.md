@@ -37,3 +37,14 @@ $$
 Predicting:
 
 No dropout.
+
+Downside:
+
+Cost function J is no longer well defined. You lose the debugging tool of plotting cost function graph. You can mitigate this downside by turning off dropout temporarily.
+
+## Other tricks
+
+* Data augmentation
+* Early stopping
+  * Comparing to L2 regularization, pro: no need to tune hyperparameter λ
+  * con: against orthogonalization
