@@ -45,14 +45,12 @@ $$
 
 v_{dw} &= β v_{dw} + (1 - β) dw \\
 
-v_{db} &= β v_{db} + (1 - β) db \\
-
-w -&= v_{dw} \\
-
-b -&= v_{db} \\
+w -&= α v_{dw} \\
 
 \end{aligned} \\
 $$
+
+The same applies to b.
 
 ## RMSprop
 
@@ -61,13 +59,49 @@ Compute dw and db.
 $$
 \begin{aligned}
 
-s_{dw} &= β_2 v_{dw} + (1 - β_2) dw^2 \\
+s_{dw} &= β v_{dw} + (1 - β) dw^2 \\
 
-s_{db} &= β_2 v_{db} + (1 - β_2) db^2 \\
+w -&= \frac{α dw}{\sqrt{s_{dw}} + ε} \\
 
-w -&= \frac{dw}{\sqrt{s_{dw}} + ε} \\
+ε &= 10^{-8}
 
-b -&= \frac{db}{\sqrt{s_{db}} + ε} \\
+\end{aligned} \\
+$$
+
+The same applies to b.
+
+## Adam (Adaptive momentum estimation)
+
+On iteration t:
+
+Compute dw and db.
+
+$$
+\begin{aligned}
+
+v_{dw} &= β_1 v_{dw} + (1 - β_1) dw \\
+
+s_{dw} &= β_2 s_{dw} + (1 - β_2) dw^2 \\
+
+v_{dw} &= \frac{v_{dw}}{1 - β_1^t} \\
+
+s_{dw} &= \frac{s_{dw}}{1 - β_2^t} \\
+
+w -&= \frac{α v_{dw}}{\sqrt{s_{dw}} + ε}
+
+\end{aligned} \\
+$$
+
+Common hyperparameter choices:
+
+$$
+\begin{aligned}
+
+α &= needs\ to\ be\ tuned \\
+
+β_1 &= 0.9 \\
+
+β_2 &= 0.999 \\
 
 ε &= 10^{-8}
 
