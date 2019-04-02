@@ -115,13 +115,6 @@ $$
 $$
 <br/>
 
-$$
-\begin{aligned}
-
-\end{aligned} \\
-$$
-<br/>
-
 Overfitting:
 
 Try to increase the number of iterations. You might see that the training set accuracy goes up, but the test set accuracy goes down. This is called overfitting.
