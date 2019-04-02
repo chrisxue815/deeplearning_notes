@@ -107,3 +107,17 @@ $$
 
 \end{aligned} \\
 $$
+
+## Learning rate decay
+
+Inverse time decay:
+
+$$
+α = α_0 * \frac{1}{1 + decay\_rate * epoch\_num}
+$$
+
+Exponential decay:
+
+$$
+α = α_0 * decay\_rate ^ {epoch\_num}
+$$
