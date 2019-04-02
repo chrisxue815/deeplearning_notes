@@ -108,6 +108,8 @@ $$
 \end{aligned} \\
 $$
 
+Larger β = larger momentum
+
 ## Learning rate decay
 
 Inverse time decay:
@@ -121,3 +123,8 @@ Exponential decay:
 $$
 α = α_0 * decay\_rate ^ {epoch\_num}
 $$
+
+## Challenges for optimization algorithms
+
+* In high dimensional space, it's unlikely to get stuck in a bad local optima. Instead most points of zero gradient are saddle points.
+* Plateaus can make learning slow.
