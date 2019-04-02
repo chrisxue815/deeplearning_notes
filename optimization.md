@@ -35,3 +35,21 @@ v_t &= \frac{v_t}{1 - β^t} \\
 
 \end{aligned} \\
 $$
+
+## Gradient descent with momentum
+
+Compute dw and db.
+
+$$
+\begin{aligned}
+
+v_{dw} &= β v_{dw} + (1 - β) dw \\
+
+v_{db} &= β v_{db} + (1 - β) db \\
+
+w -&= v_{dw} \\
+
+b -&= v_{db} \\
+
+\end{aligned} \\
+$$
