@@ -53,3 +53,23 @@ b -&= v_{db} \\
 
 \end{aligned} \\
 $$
+
+## RMSprop
+
+Compute dw and db.
+
+$$
+\begin{aligned}
+
+s_{dw} &= β_2 v_{dw} + (1 - β_2) dw^2 \\
+
+s_{db} &= β_2 v_{db} + (1 - β_2) db^2 \\
+
+w -&= \frac{dw}{\sqrt{s_{dw}} + ε} \\
+
+b -&= \frac{db}{\sqrt{s_{db}} + ε} \\
+
+ε &= 10^{-8}
+
+\end{aligned} \\
+$$
