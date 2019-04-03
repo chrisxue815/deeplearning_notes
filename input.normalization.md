@@ -1,12 +1,15 @@
-## Normalizing inputs
+## Input normalizing
 
 $$
 \begin{aligned}
 
-mean\ μ &= \frac{1}{m} \sum\limits_{i=1}^m x^{(i)} \\
+μ &= \frac{1}{m} \sum\limits_{i=1}^m x^{(i)} \\
+
 x -&= μ \\
-variance\ σ^2 &= \frac{1}{m} \sum\limits_{i=1}^m (x^{(i)} - μ)^2 ...... μ=0\ here \\
-x /&= σ^2 \\
+
+σ^2 &= \frac{1}{m} \sum\limits_{i=1}^m (x^{(i)})^2 \\
+
+x /&= \sqrt{σ^2 + ε} \\
 
 \end{aligned} \\
 $$
@@ -28,6 +31,52 @@ target\ variance\ σ^2(w)
 &= \sqrt{\frac{1}{n^{[l-1]}}} ...... for\ tanh \\
 
 w^{[l]} &= np.random.randn(shape) * np.sqrt(σ^2) \\
+
+\end{aligned} \\
+$$
+
+## Batch normalization
+
+Forward propagation:
+
+$$
+\begin{aligned}
+
+z^{[l]} &= w^{[l]} a^{[l-1]} ......b\ omitted \\
+
+μ &= \frac{1}{m} \sum\limits_{i=1}^m z^{(i)} \\
+
+z -&= μ \\
+
+σ^2 &= \frac{1}{m} \sum\limits_{i=1}^m (z^{(i)})^2 \\
+
+z_{norm} &= \frac{z}{\sqrt{σ^2 + ε}} \\
+
+\tilde{z} &= γ z_{norm} + β \\
+
+a &= g(\tilde{z}) \\
+
+\end{aligned} \\
+$$
+
+Backward propagation:
+
+$$
+\begin{aligned}
+
+da^{[L]} &= -\frac{y}{a^{[L]}} + \frac{1-y}{1-a^{[L]}} \\
+
+d\tilde{z} &= da * g'(\tilde{z}) \\
+
+dγ &= d\tilde{z} * z_{norm} \\
+
+dβ &= d\tilde{z} \\
+
+dz &= \frac{d\tilde{z} * γ}{\sqrt{σ^2 + ε}} \\
+
+dw &= dz * a^{[l-1]} \\
+
+da^{[l-1]} &= dz^{[l]} * w^{[l]} \\
 
 \end{aligned} \\
 $$
