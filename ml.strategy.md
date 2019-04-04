@@ -1,27 +1,26 @@
-## Bias and variance
+## Basic recipe
 
-High bias: training accuracy lower than baseline.
+Orthogonalization: implement controls that only affect a single component of your algorithm's performance at a time.
 
-Solution:
+High bias: training accuracy lower than baseline. Solution:
 * Bigger network
 * Longer training
 * Better optimization algorithms
 * NN architecture/hyperparameter search
 
-High variance: overfitting, test accuracy << training accuracy
-
-Solution:
+High variance: overfitting, test accuracy << training accuracy. Solution:
 * More data
 * Regularization
 * NN architecture/hyperparameter search
 
-## Techniques
-* Orthogonalization
+## Setting up your goal
+
 * Single number evaluation metric
 * Satisficing and optimizing metric
+* Choose a dev set and test set to reflect data you expect to get in the future and consider important to do well on
 * Set your dev/test set to be big enough to give high confidence in the overall performance of your system
 
-## Metrics
+### Metrics
 
 $$
 \begin{aligned}
