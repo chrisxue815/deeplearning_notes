@@ -5,15 +5,15 @@ High bias: training accuracy lower than baseline.
 Solution:
 * Bigger network
 * Longer training
-* Redesign NN architecture
+* Better optimization algorithms
+* NN architecture/hyperparameter search
 
 High variance: overfitting, test accuracy << training accuracy
 
 Solution:
 * More data
 * Regularization
-* Longer training
-* Redesign NN architecture
+* NN architecture/hyperparameter search
 
 ## Techniques
 * Orthogonalization
