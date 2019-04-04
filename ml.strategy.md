@@ -1,3 +1,5 @@
+## Bias and variance
+
 High bias: training accuracy lower than baseline.
 
 Solution:
