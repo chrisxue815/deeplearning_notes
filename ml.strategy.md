@@ -34,3 +34,9 @@ F1\ score &= \frac{2}{\frac{1}{Precision} + \frac{1}{Recall}} \\
 
 \end{aligned} \\
 $$
+
+## Human-level performance
+
+Bayes error rate: the lowest possible error rate for any classifier of a random outcome.
+
+Use human-level error as a proxy/estimate for Bayes error.
