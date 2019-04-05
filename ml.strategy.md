@@ -40,3 +40,9 @@ $$
 Bayes error rate: the lowest possible error rate for any classifier of a random outcome.
 
 Use human-level error as a proxy/estimate for Bayes error.
+
+## Error analysis
+
+* Evaluate multiple performance-improving ideas in parallel (in a table)
+* Before fixing incorrectly labelled data, collect statistics and estimate performance gain
+* Build your first system quickly, then iterate
