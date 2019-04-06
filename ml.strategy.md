@@ -46,3 +46,14 @@ Use human-level error as a proxy/estimate for Bayes error.
 * Evaluate multiple performance-improving ideas in parallel (in a table)
 * Before fixing incorrectly labelled data, collect statistics and estimate performance gain
 * Build your first system quickly, then iterate
+
+## Mismatched training and dev/test set
+
+* Choose a dev set and test set to reflect data you expect to get in the future and consider important to do well on. Also put a part of these data into training set.
+* Set up a training-dev set that has the same distribution as training set
+  * Large variance between training and training-dev set: overfitting to training set
+  * Large variance between training-dev and dev test: data mismatch
+* Addressing data mismatch:
+  * Manual error analysis
+  * Collect more data similar to dev/test set
+    * Artificial data synthesis
