@@ -64,3 +64,19 @@ Transfer learning makes sense when
 * Task A and B have the same input X
 * You have a lot more data for A (pre-training) than B (fine-tuning)
 * Low level features from A could be helpful for learning B
+
+## Multi-task learning
+
+Multi-task learning makes sense when
+* Training on a set of tasks that could benefit from having shared low-level features
+* Usually: amount of data you have for each task is quite similar
+
+$$
+\begin{aligned}
+
+Cost &= \frac{1}{m} \sum\limits_{i=1}^m \sum\limits_{j=1}^{n^{[L]}} L(\hat{y}_j^{(i)}, y_j^{(i)}) \\
+
+L &: usually\ logistic\ cross\ entropy\ loss \\
+
+\end{aligned} \\
+$$
