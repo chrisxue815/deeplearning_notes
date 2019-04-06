@@ -57,3 +57,10 @@ Use human-level error as a proxy/estimate for Bayes error.
   * Manual error analysis
   * Collect more data similar to dev/test set
     * Artificial data synthesis
+
+## Transfer learning
+
+Transfer learning makes sense when
+* Task A and B have the same input X
+* You have a lot more data for A (pre-training) than B (fine-tuning)
+* Low level features from A could be helpful for learning B
