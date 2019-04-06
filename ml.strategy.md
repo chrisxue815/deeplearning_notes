@@ -80,3 +80,24 @@ L &: usually\ logistic\ cross\ entropy\ loss \\
 
 \end{aligned} \\
 $$
+
+## End-to-end learning
+
+In contrast to this pipeline with a lot of stages, what end-to-end deep learning does, is you can train a huge neural network to just input the audio clip, and have it directly output the transcript.
+
+One of the challenges of end-to-end deep learning is that you might need a lot of data before it works well.
+
+Multi-step approach works better when:
+* Each sub-task you are solving is much simpler
+* You have a lot of data for each sub-task
+
+Pros of end-to-end learning:
+* Let the data speak
+* Less hand-designing of components needed
+
+Cons of end-to-end learning:
+* May need large amount of data
+* Excludes potentially useful hand-designed components
+
+Applying end-to-end learning
+* Key question: do you have sufficient data to learn a function of the complexity needed to map x to y?
