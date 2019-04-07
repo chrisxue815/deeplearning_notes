@@ -1,4 +1,4 @@
-## Concepts
+## CNN
 
 * Convolution, cross-correlation
 * Max pooling, average pooling
@@ -55,3 +55,23 @@ $$
 
 \end{aligned} \\
 $$
+
+## ResNet
+
+$$
+\begin{aligned}
+
+z^{[l+1]} &= w^{[l+1]} a^{[l]} + b^{[l+1]} \\
+
+a^{[l+1]} &= g(z^{[l+1]}) \\
+
+z^{[l+2]} &= w^{[l+2]} a^{[l+1]} + b^{[l+2]} \\
+
+a^{[l+2]} &= g(z^{[l+2]} + a^{[l]}) \\
+
+\end{aligned} \\
+$$
+
+Why do residual networks work?
+* Linear function is easy for residual block to learn
+* Using a skip-connection helps the gradient to backpropagate and thus helps you to train deeper networks
