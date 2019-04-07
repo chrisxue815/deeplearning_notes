@@ -45,6 +45,12 @@ Cost function J is no longer well defined. You lose the debugging tool of plotti
 ## Other tricks
 
 * Data augmentation
+  * Mirroring
+  * Random cropping
+  * Color shifting, PCA color augmentation
+  * Implementing distortions during training
 * Early stopping
   * Comparing to L2 regularization, pro: no need to tune hyperparameter λ
   * con: against orthogonalization
+* Ensembling: Train several networks independently and average their outputs
+* Multi-crop at test time: Run classifier on multiple versions of test images and average results
