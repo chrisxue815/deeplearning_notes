@@ -17,6 +17,8 @@ $$
   * Parameter sharing: a feature detector (such as a vertical edge detector) that's useful in one part of the image is probably useful in another part of the image
   * Sparsity of connections: in each layer, each output value depends only on a small number of inputs
 * Translation invariance
+* Residual block
+* 1x1 convolution, bottleneck layer
 
 ## Forward propagation
 
