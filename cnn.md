@@ -17,8 +17,9 @@ $$
   * Parameter sharing: a feature detector (such as a vertical edge detector) that's useful in one part of the image is probably useful in another part of the image
   * Sparsity of connections: in each layer, each output value depends only on a small number of inputs
 * Translation invariance
-* Residual block
+* Residual network, residual block
 * 1x1 convolution, bottleneck layer
+* Inception
 
 ## Forward propagation
 
@@ -75,3 +76,9 @@ $$
 Why do residual networks work?
 * Linear function is easy for residual block to learn
 * Using a skip-connection helps the gradient to backpropagate and thus helps you to train deeper networks
+
+What you should remember:
+* Very deep "plain" networks don't work in practice because they are hard to train due to vanishing gradients.
+* The skip-connections help to address the Vanishing Gradient problem. They also make it easy for a ResNet block to learn an identity function.
+* There are two main type of blocks: The identity block and the convolutional block.
+* Very deep Residual Networks are built by stacking these blocks together.
