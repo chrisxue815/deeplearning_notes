@@ -1,5 +1,5 @@
-* Face verification: 1 : 1
-* Face recognition: 1 : K
+* Face verification: 1:1 matching
+* Face recognition: 1:K matching
 * One shot learning
 * Learning a similarity function $d(img1, img2)$ = degree of difference between images
 
@@ -43,9 +43,9 @@ $$
 
 \hat{y} &= σ (w * d(i, j) + b) \\
 
-L1\ similarity:\ d(i, j) &= \sum\limits_{k=1}^n |f(x^{(i)})_k - f(x^{(j)})_k| \\
+L1\ similarity:\ d(i, j) &= |f(x^{(i)}) - f(x^{(j)})| \\
 
-χ2\ similarity:\ d(i, j) &= \sum\limits_{k=1}^n \frac{(f(x^{(i)})_k - f(x^{(j)})_k)2} {f(x^{(i)})_k + f(x^{(j)})_k}
+χ2\ similarity:\ d(i, j) &= \frac{(f(x^{(i)}) - f(x^{(j)}))2} {f(x^{(i)}) + f(x^{(j)})}
 
 \end{aligned} \\
 $$

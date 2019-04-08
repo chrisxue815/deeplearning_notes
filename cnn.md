@@ -19,7 +19,6 @@ $$
 * Translation invariance
 * Residual network, residual block
 * 1x1 convolution, bottleneck layer
-* Inception
 
 ## Forward propagation
 
@@ -56,6 +55,13 @@ $$
 
 \end{aligned} \\
 $$
+
+## Classic networks
+* LeNet
+* AlexNet
+* VGG
+* ResNet
+* Inception
 
 ## ResNet
 
