@@ -1,4 +1,4 @@
-## Mini batch gradient descent
+﻿## Mini batch gradient descent
 
 Split training set into mini batches and use one mini batch in one gradient descent iteration.
 

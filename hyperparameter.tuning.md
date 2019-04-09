@@ -1,4 +1,4 @@
-## Hyperparameter tuning
+﻿## Hyperparameter tuning
 
 * Random instead of grid
 * Coarse to find

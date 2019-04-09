@@ -1,4 +1,4 @@
-## CNN
+﻿## CNN
 
 * Convolution, cross-correlation
 * Max pooling, average pooling

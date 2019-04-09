@@ -1,4 +1,4 @@
-## Softmax activation
+﻿## Softmax activation
 
 Forward propagation:
 

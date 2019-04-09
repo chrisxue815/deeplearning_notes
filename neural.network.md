@@ -1,4 +1,4 @@
-Forward propagation:
+﻿Forward propagation:
 
 $$
 \begin{aligned}

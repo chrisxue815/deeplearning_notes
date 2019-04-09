@@ -1,4 +1,4 @@
-* Classification: labelling objects, supports one object at a time.
+﻿* Classification: labelling objects, supports one object at a time.
 * Classification with localization: labelling and localizing objects, supports one object at a time.
 * Object detection: labelling and localizing objects, supports multiple objects at a time.
 * Landmark detection

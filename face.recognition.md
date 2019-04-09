@@ -1,4 +1,4 @@
-* Face verification: 1:1 matching
+﻿* Face verification: 1:1 matching
 * Face recognition: 1:K matching
 * One shot learning
 * Learning a similarity function $d(img1, img2)$ = degree of difference between images

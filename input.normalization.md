@@ -1,4 +1,4 @@
-## Input normalizing
+﻿## Input normalizing
 
 $$
 \begin{aligned}

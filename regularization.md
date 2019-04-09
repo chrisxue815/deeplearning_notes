@@ -1,4 +1,4 @@
-## L2 regularization
+﻿## L2 regularization
 
 $$
 \begin{aligned}

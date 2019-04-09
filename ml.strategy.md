@@ -1,4 +1,4 @@
-## Basic recipe
+﻿## Basic recipe
 
 Orthogonalization: implement controls that only affect a single component of your algorithm's performance at a time.
 

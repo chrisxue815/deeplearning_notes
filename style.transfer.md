@@ -1,4 +1,4 @@
-## What are deep ConvNets learning?
+﻿## What are deep ConvNets learning?
 
 Visualizing and understanding convolutional networks
 * Pick a unit in layer 1. Find the 9 image patches that maximize the unit's activation.
