@@ -88,3 +88,9 @@ What you should remember:
 * The skip-connections help to address the Vanishing Gradient problem. They also make it easy for a ResNet block to learn an identity function.
 * There are two main type of blocks: The identity block and the convolutional block.
 * Very deep Residual Networks are built by stacking these blocks together.
+
+## Applications
+
+* Object classification, localization, detection
+* Face verification, recognition
+* Style transfer
