@@ -39,7 +39,7 @@ Commonly, g is tanh, g' is sigmoid or softmax
 * Many-to-one ($T_y = 1$)
   * Sentiment classification
   * Video activity recognition
-* Attention-based
+* Attention model
 
 ## Language model
 

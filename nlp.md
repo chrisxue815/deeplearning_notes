@@ -16,7 +16,7 @@ A categorical feature represented as a continuous-valued feature. Typically, an 
 Question: A is to A' as B is to what?
 
 $$
-arg\max\limits_{w} sim(e_w, e_B - e_A + e_{A'})
+arg\max_{w} sim(e_w, e_B - e_A + e_{A'})
 $$
 
 where $sim$ is commonly cosine similarity function
