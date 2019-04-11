@@ -14,7 +14,7 @@ If\ P_c = 0: \\
 L &= (\hat{y}_1 - y_2)^2 \\
 
 If\ P_c = 1: \\
-L &= \sum\limits_{i=1}^n (\hat{y}_i - y_i)^2 \\
+L &= \sum_{i=1}^n (\hat{y}_i - y_i)^2 \\
 
 \end{aligned} \\
 $$

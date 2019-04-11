@@ -26,7 +26,7 @@ Loss function
 $$
 \begin{aligned}
 L &= max(0, d(A, P) - d(A, N) + α) \\
-Cost &= \sum\limits_{i=1}^m L^{(i)}
+Cost &= \sum_{i=1}^m L^{(i)}
 \end{aligned} \\
 $$
 

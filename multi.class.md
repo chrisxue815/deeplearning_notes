@@ -9,11 +9,11 @@ z^{[L]} &= w^{[L]} a^{[L-1]} + b^{[L]} \\
 
 t &= e^{z^{[L]}} \\
 
-a^{[L]} &= \frac{t}{\sum\limits_{j=1}^{n_L} t_j} \\
+a^{[L]} &= \frac{t}{\sum_{j=1}^{n_L} t_j} \\
 
-L &= -\sum\limits_{j=1}^{n_L} y_j log(a^{[L]}_j) \\
+L &= -\sum_{j=1}^{n_L} y_j log(a^{[L]}_j) \\
 
-J &= \frac{1}{m} \sum\limits_{i=1}^m L^{(i)} \\
+J &= \frac{1}{m} \sum_{i=1}^m L^{(i)} \\
 
 \end{aligned} \\
 $$

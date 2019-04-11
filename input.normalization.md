@@ -3,11 +3,11 @@
 $$
 \begin{aligned}
 
-μ &= \frac{1}{m} \sum\limits_{i=1}^m x^{(i)} \\
+μ &= \frac{1}{m} \sum_{i=1}^m x^{(i)} \\
 
 x -&= μ \\
 
-σ^2 &= \frac{1}{m} \sum\limits_{i=1}^m (x^{(i)})^2 \\
+σ^2 &= \frac{1}{m} \sum_{i=1}^m (x^{(i)})^2 \\
 
 x /&= \sqrt{σ^2 + ε} \\
 
@@ -44,11 +44,11 @@ $$
 
 z^{[l]} &= w^{[l]} a^{[l-1]} ......b\ omitted \\
 
-μ &= \frac{1}{m} \sum\limits_{i=1}^m z^{(i)} \\
+μ &= \frac{1}{m} \sum_{i=1}^m z^{(i)} \\
 
 z -&= μ \\
 
-σ^2 &= \frac{1}{m} \sum\limits_{i=1}^m (z^{(i)})^2 \\
+σ^2 &= \frac{1}{m} \sum_{i=1}^m (z^{(i)})^2 \\
 
 z_{norm} &= \frac{z}{\sqrt{σ^2 + ε}} \\
 

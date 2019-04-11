@@ -74,7 +74,7 @@ Multi-task learning makes sense when
 $$
 \begin{aligned}
 
-Cost &= \frac{1}{m} \sum\limits_{i=1}^m \sum\limits_{j=1}^{n^{[L]}} L(\hat{y}_j^{(i)}, y_j^{(i)}) \\
+Cost &= \frac{1}{m} \sum_{i=1}^m \sum_{j=1}^{n^{[L]}} L(\hat{y}_j^{(i)}, y_j^{(i)}) \\
 
 L &: usually\ logistic\ cross\ entropy\ loss \\
 

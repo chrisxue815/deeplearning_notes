@@ -26,7 +26,7 @@ $$
 * Style matrix (gram matrix) $G^{[l]}$ is $n_c^{[l]} * n_c^{[l]}$
 
 $$
-G_{k,k'}^{[l]} = \sum\limits_{i=1}^{n_H^{[l]}} \sum\limits_{j=1}^{n_W^{[l]}} a_{i,j,k}^{[l]} a_{i,j,k'}^{[l]} \\
+G_{k,k'}^{[l]} = \sum_{i=1}^{n_H^{[l]}} \sum_{j=1}^{n_W^{[l]}} a_{i,j,k}^{[l]} a_{i,j,k'}^{[l]} \\
 
 G^{[l]} = a * a^T \\
 
@@ -40,9 +40,9 @@ $$
 
 J_{style}^{[l]}(S, G)
 &= \frac{1}{2 n_H^{[l]} n_W^{[l]} n_c^{[l]}} ||G^{[l](S)} - G^{[l](G)}||_F^2 \\
-&= \frac{1}{2 n_H^{[l]} n_W^{[l]} n_c^{[l]}} \sum\limits_k \sum\limits_{k'} (G_{k,k'}^{[l](S)} - G_{k,k'}^{[l](G)})^2 \\
+&= \frac{1}{2 n_H^{[l]} n_W^{[l]} n_c^{[l]}} \sum_k \sum_{k'} (G_{k,k'}^{[l](S)} - G_{k,k'}^{[l](G)})^2 \\
 
-J_{style}(S, G) &= \sum\limits_l λ^{[l]} J_{style}^{[l]}(S, G) \\
+J_{style}(S, G) &= \sum_l λ^{[l]} J_{style}^{[l]}(S, G) \\
 
 \end{aligned} \\
 $$

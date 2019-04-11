@@ -46,9 +46,9 @@ O_c -> E -> e_c -> softmax -> \hat{y} \\
 
 v = vocab\_size \\
 
-softmax: p(t|c) = \frac{e^{θ_t^T e_c}}{\sum\limits_{j=1}^{v} e^{θ_j^T e_c}} \\
+softmax: p(t|c) = \frac{e^{θ_t^T e_c}}{\sum_{j=1}^{v} e^{θ_j^T e_c}} \\
 
-L = - \sum\limits_{i=1}^v y ln(\hat{y}) \\
+L = - \sum_{i=1}^v y ln(\hat{y}) \\
 
 $$
 
@@ -72,7 +72,7 @@ Training:
 * One positive context/word pair, k randomly chosen negative pairs, where the possibility $P(w_i)$ is governed by
 
 $$
-P(w_i) = \frac{f(w_i)^{0.75}}{\sum\limits_{j=1}^v f(w_j)^{0.75}}
+P(w_i) = \frac{f(w_i)^{0.75}}{\sum_{j=1}^v f(w_j)^{0.75}}
 $$
 
 ### GloVe (global vectors for word representation)
@@ -82,7 +82,7 @@ $$
 Model:
 
 $$
-\sum\limits_{i=1}^v \sum\limits_{j=1}^v f(x_{ij}) (θ_i^T e_j + b_i + b_j' - ln(x_{ij}))^2
+\sum_{i=1}^v \sum_{j=1}^v f(x_{ij}) (θ_i^T e_j + b_i + b_j' - ln(x_{ij}))^2
 $$
 
 where

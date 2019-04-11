@@ -19,7 +19,7 @@ a^{<t>} &= g(W_a [a^{<t-1>}, x^{<t>}] + b_a) \\
 
 L^{<t>} &= -(y^{<t>} ln(\hat{y}^{<t>}) + (1 - y^{<t>}) ln(1-\hat{y}^{<t>})) \\
 
-L &= \sum\limits_{t=1}^{T_x} L^{<t>} \\
+L &= \sum_{t=1}^{T_x} L^{<t>} \\
 
 \end{aligned} \\
 $$

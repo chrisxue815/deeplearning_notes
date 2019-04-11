@@ -3,9 +3,9 @@
 $$
 \begin{aligned}
 
-J &= \frac{1}{m} \sum\limits_{i=1}^m L^{(i)} + \frac{λ}{2m} \sum\limits_{l=1}^m ||w^{[l]}||^2_{F} \\
+J &= \frac{1}{m} \sum_{i=1}^m L^{(i)} + \frac{λ}{2m} \sum_{l=1}^m ||w^{[l]}||^2_{F} \\
 
-Forbenius\ norm\ ||w^{[l]}||^2_F &= \sum\limits_{i=1}^{n^{[l]}} \sum\limits_{j=1}^{n^{[l-1]}} (w^{[l]}_{ij})^2 \\
+Forbenius\ norm\ ||w^{[l]}||^2_F &= \sum_{i=1}^{n^{[l]}} \sum_{j=1}^{n^{[l-1]}} (w^{[l]}_{ij})^2 \\
 
 dw^{[l]} &= (from\ backprop) + \frac{λ}{m} w^{[l]} \\
 

@@ -11,7 +11,7 @@ a^{[l]} &= g(z^{[l]}) \\
 
 L &= - (yln(a^{[l]}) + (1-y)ln(1-a^{[l]}) \\
 
-J &= \frac{1}{m} \sum\limits_{i=1}^m L^{(i)} \\
+J &= \frac{1}{m} \sum_{i=1}^m L^{(i)} \\
 
 \end{aligned}
 $$

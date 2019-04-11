@@ -44,7 +44,7 @@ $$
 &= \frac{1}{1 + e^{-z^i}} \\
 
 z^i &= w^T x^i + b \\
-&= (\sum\limits_{j=1}^n w_j x^i_j) + b
+&= (\sum_{j=1}^n w_j x^i_j) + b
 
 \end{aligned} \\
 $$
@@ -66,7 +66,7 @@ $$
 Cost function:
 
 $$
-J = \frac{1}{m} \sum\limits_{i=1}^m L(a^i, y^i)
+J = \frac{1}{m} \sum_{i=1}^m L(a^i, y^i)
 $$
 <br/>
 
@@ -105,11 +105,11 @@ $$
 \frac{∂L(a, y)}{∂b} &= \frac{∂L(a, y)}{∂z}\frac{dz}{db} \\
 &= a-y \\
 
-\frac{∂J}{∂w_j} &= \frac{1}{m} \sum\limits_{i=1}^m \frac{∂L(a^i, y^i)}{∂w_j} \\
-&= \frac{1}{m} \sum\limits_{i=1}^m (a^i-y^i)x^i_j \\
+\frac{∂J}{∂w_j} &= \frac{1}{m} \sum_{i=1}^m \frac{∂L(a^i, y^i)}{∂w_j} \\
+&= \frac{1}{m} \sum_{i=1}^m (a^i-y^i)x^i_j \\
 
-\frac{∂J}{∂b} &= \frac{1}{m} \sum\limits_{i=1}^m \frac{∂L(a^i, y^i)}{∂b} \\
-&= \frac{1}{m} \sum\limits_{i=1}^m (a^i-y^i) \\
+\frac{∂J}{∂b} &= \frac{1}{m} \sum_{i=1}^m \frac{∂L(a^i, y^i)}{∂b} \\
+&= \frac{1}{m} \sum_{i=1}^m (a^i-y^i) \\
 
 \end{aligned} \\
 $$
